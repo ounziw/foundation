@@ -36,6 +36,20 @@ return array(
                 'sub' => '2,0,1,1',
             ),
             'module' => '',
+        ),
+        'foundation_banded' => array(
+            'file' => 'foundation::banded',
+            'title' => 'Foundation banded',
+            'cols' => 3,
+            'rows' => 3,
+            'layout' => array(
+                'mainimg' => '0,0,3,1',
+                'imgl' => '0,1,1,1',
+                'contentr' => '1,1,2,1',
+                'contentl' => '0,2,2,1',
+                'imgr' => '2,2,1,1',
+            ),
+            'module' => '',
         )
     ),
 );
