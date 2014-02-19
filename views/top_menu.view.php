@@ -1,10 +1,11 @@
-<?php $templatepath = 'static/apps/foundation/';?><!doctype html>
-<html class="no-js" lang="en">
+<!doctype html>
+<html class="no-js" lang="<?php echo substr($page->get_context(),6,2);?>">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Foundation Theme</title>
     <?php
+    $templatepath = 'static/apps/foundation/';
     \Nos\Nos::main_controller()->addCss($templatepath."css/foundation.css");
     \Nos\Nos::main_controller()->addJavascript($templatepath."js/vendor/modernizr.js",false); // false: header
     \Nos\Nos::main_controller()->addJavascript($templatepath."js/vendor/jquery.js",true); // true: footer
