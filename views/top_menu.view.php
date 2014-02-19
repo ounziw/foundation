@@ -4,8 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Foundation Theme</title>
-    <link rel="stylesheet" href="<?= $templatepath ?>css/foundation.css" />
-    <script src="<?= $templatepath ?>js/vendor/modernizr.js"></script>
+    <?php
+    \Nos\Nos::main_controller()->addCss($templatepath."css/foundation.css");
+    \Nos\Nos::main_controller()->addJavascript($templatepath."js/vendor/modernizr.js",false); // false: header
+    \Nos\Nos::main_controller()->addJavascript($templatepath."js/vendor/jquery.js",true); // true: footer
+    \Nos\Nos::main_controller()->addJavascript($templatepath."js/foundation.min.js",true); // true: footer
+    $js = "$(document).foundation();";
+    \Nos\Nos::main_controller()->addJavascriptInline($js,true); // true: footer
+    ?>
 </head>
 <body>
 
@@ -29,10 +35,5 @@ echo \View::forge('foundation::subviews/menu', array(
     </div>
 </div>
 
-<script src="<?= $templatepath ?>js/vendor/jquery.js"></script>
-<script src="<?= $templatepath ?>js/foundation.min.js"></script>
-<script>
-    $(document).foundation();
-</script>
 </body>
 </html>
