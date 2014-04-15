@@ -22,6 +22,18 @@ echo \View::forge('foundation::subviews/menu', array(
     </div>
 </div>
 
+<div class="row">
+    <div class="large-6 medium-6 columns">
+        <div class="callout panel">
+            <?= $wysiwyg['content-l'] ?>
+        </div>
+    </div>
+    <div class="large-6 medium-6 columns">
+        <div class="callout panel">
+            <?= $wysiwyg['content-r'] ?>
+        </div>
+    </div>
+</div>
 
 <?= \View::forge('foundation::subviews/footer') ?>
 

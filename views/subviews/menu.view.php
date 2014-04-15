@@ -24,10 +24,10 @@
               if ($context === $current_context) {
                   continue;
               }
-              $links[] = '<a href="'.\Nos\Tools_Url::context($context).'">'.\Nos\Tools_Context::contextLabel($context).'</a>';
+              $links[] = '<a href="'.\Nos\Tools_Url::context($context).'"> &rarr;'.\Nos\Tools_Context::contextLabel($context).'</a>';
           }
           if (!empty($links)) {
-              echo '<div id="contexts">', implode(' | ', $links), '</div>';
+              echo implode(' | ', $links);
           }
           ?></h1>
     </li>
