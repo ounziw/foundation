@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="<?php echo substr($page->get_context(),6,2);?>">
+<html class="no-js" lang="<?php echo \Nos\Tools_Context::localeCode($page->get_context());?>">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

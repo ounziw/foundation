@@ -1,4 +1,4 @@
-<?= \View::forge('foundation::subviews/header') ?>
+<?= \View::forge('foundation::subviews/header', array('current_context' => $page->get_context())) ?>
 
 <body>
 
